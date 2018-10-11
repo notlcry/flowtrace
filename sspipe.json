@@ -1,0 +1,13 @@
+{
+  "description" : "ss format",
+  "processors": [
+    {
+      "grok": {
+        "field": "message",
+        "patterns": ["%{TIMESTAMP_ISO8601:timeuse} INFO\\s+connecting %{HOSTNAME:domain}:%{NUMBER:ports} from %{IP:client}:%{NUMBER:portc}"]
+      }
+    }
+  ]
+}
+
+     
